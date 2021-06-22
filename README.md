@@ -1,5 +1,5 @@
 # nlw-together
-New Level Week Six - Rocketseat
+Next Level Week Six - Rocketseat
 
  - git clone 
 
