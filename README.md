@@ -7,7 +7,17 @@ Next Level Week Six - Rocketseat
 
  - yarn dev
 
+ - yarn typeorm migration:create -n CreateTags ( cria migration )
 
+ - yarn typeorm migration:run ( roda migration )
+
+ * - Ordem de Desenvolvimento: :?
+    * Cria a migration
+    * Cria entity
+    * Cria repository
+    * Cria service
+    * Cria controller
+    * Cria rota
 
  # NLW Valoriza
 
@@ -21,11 +31,11 @@ Next Level Week Six - Rocketseat
 
 - Cadastro de TAG
 
-[ ] Não é permitido cadastrar mais de uma tag com o mesmo nome
+[x] Não é permitido cadastrar mais de uma tag com o mesmo nome
 
-[ ] Não é permitido cadastrar tag sem nome
+[x] Não é permitido cadastrar tag sem nome
 
-[ ] Não é permitido o cadastro por usuários que não sejam administradores
+[x] Não é permitido o cadastro por usuários que não sejam administradores
 
 - Cadastro de elogios
 
