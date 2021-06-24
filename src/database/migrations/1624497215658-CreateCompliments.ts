@@ -52,18 +52,18 @@ export class CreateCompliments1624497215658 implements MigrationInterface {
                         onUpdate: "SET NULL"
                     },
                     {
-                        name: "FKUTagCompliments",
-                        referencedTableName: "tag",
+                        name: "FKTagCompliments",
+                        referencedTableName: "tags",
                         referencedColumnNames: ["id"],
                         columnNames: ["tag_id"],
                         onDelete: "SET NULL",
                         onUpdate: "SET NULL"
                     },
-                ]
+                ],
             })
 
             
-        )
+        );
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
