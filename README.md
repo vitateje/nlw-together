@@ -11,7 +11,7 @@ Next Level Week Six - Rocketseat
 
  - yarn typeorm migration:run ( roda migration )
 
- * - Ordem de Desenvolvimento: :?
+ * - Ordem de Desenvolvimento:
     * Cria a migration
     * Cria entity
     * Cria repository
@@ -19,15 +19,21 @@ Next Level Week Six - Rocketseat
     * Cria controller
     * Cria rota
 
- # NLW Valoriza
+ * - Await:
+      ele vai esperar o resultado da ação para seguir o fluxo
+      verificar retorno, caso seja de uma promise utilizar o await
+   - Async:
+      apontar que na classe haverá uma ação com await
+
+# NLW Valoriza
 
 ## Regras
 
 - Cadastro de Usuário
 
- [x] Não é permitido cadastrar mais de um usuário com o mesmo e-mail
+[x] Não é permitido cadastrar mais de um usuário com o mesmo e-mail
 
- [x] Não é permitido cadastrar usuário sem e-mail
+[x] Não é permitido cadastrar usuário sem e-mail
 
 - Cadastro de TAG
 
@@ -44,3 +50,10 @@ Next Level Week Six - Rocketseat
 [ ] Não é permitido cadastrar elogios para usuários inválidos
 
 [ ] O usuário precisa estar autenticado na aplicação
+
+# Others
+
+ - beekeeper
+ - typeorm
+ - sqlite
+ - 
