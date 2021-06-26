@@ -4,7 +4,6 @@ import { CreateTagController } from "./controllers/CreateTagController";
 import { CreateComplimentController } from "./controllers/CreateComplimentController";
 import { AuthenticateUserController } from "./controllers/AuthenticateUserController";
 import { ensureAdmin } from "./middlewares/ensureAdmin";
-import { CreateComplimentService } from "./services/CreateComplimentService";
 import { ensureAuthenticated } from "./middlewares/ensureAuthenticated";
 
 const router = Router();
