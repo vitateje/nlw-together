@@ -1,5 +1,5 @@
 import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
-import { v4 as uuid } from "uuid"
+import { v4 as uuid } from "uuid";
 
 @Entity("tags")
 class Tag {
@@ -24,5 +24,5 @@ class Tag {
 
 }
 
-export { Tag }
+export { Tag };
 

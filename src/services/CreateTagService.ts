@@ -1,13 +1,9 @@
 import { getCustomRepository } from "typeorm";
 import { TagsRepositories } from "../repositories/TagsRepositories"
 
-interface IUserRequest {
-    name: string;
-}
-
 class CreateTagService {
 
-    async execute({ name }: IUserRequest) {
+    async execute( name: string ) {
         const tagsRepositories = getCustomRepository(TagsRepositories);
 
         if(!name) {
@@ -22,7 +18,7 @@ class CreateTagService {
             throw new Error("Tag already exists");
         }
         const tag = tagsRepositories.create({
-            name
+            name,
         })
 
         await tagsRepositories.save(tag);
@@ -31,4 +27,4 @@ class CreateTagService {
     }
 }
 
-export { CreateTagService }
+export { CreateTagService };
