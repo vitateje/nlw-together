@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express"
 import { verify } from "jsonwebtoken";
 
 interface IPayload {
-    sub: String
+    sub: string
 }
 
 export function ensureAuthenticated(
