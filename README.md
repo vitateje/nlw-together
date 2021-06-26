@@ -9,6 +9,8 @@ Next Level Week Six - Rocketseat
 
  - yarn typeorm migration:create -n CreateTags ( cria migration )
 
+ - yarn typeorm migration: generate -n CreateTags ( gera novamente a migration apos alterações na mesma )
+
  - yarn typeorm migration:run ( roda migration )
 
  * - Ordem de Desenvolvimento:
