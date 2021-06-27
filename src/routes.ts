@@ -6,11 +6,9 @@ import { AuthenticateUserController } from "./controllers/AuthenticateUserContro
 import { ensureAdmin } from "./middlewares/ensureAdmin";
 import { ensureAuthenticated } from "./middlewares/ensureAuthenticated";
 import { ListUserSendComplimentsController } from "./controllers/ListUserSendComplimentsController";
-import { ListUserReceiveComplimentsController } from "./controllers/listUserReceiveComplimentsController";
+import { ListUserReceiveComplimentsController } from "./controllers/ListUserReceiveComplimentsController";
 import { ListTagsController } from "./controllers/ListTagsController";
 import { ListUsersController } from "./controllers/ListUsersController";
-
-
 
 const router = Router();
 
@@ -23,10 +21,9 @@ const listUserReceiveComplimentsController = new ListUserReceiveComplimentsContr
 const listTagsController = new ListTagsController();
 const listUsersController = new ListUsersController();
 
-
 router.post("/users", createUserController.handle);
 
-// middlewares: fica entre a requisição e a resposta - ensureAdmin ( pode interceptar ou seguir a frente )
+// middlewares: fica entre a requisição e a resposta - ensureAdmin ( pode interceptar uma requisição )
 router.post("/tags", ensureAuthenticated, ensureAdmin, createTagController.handle);
 
 router.post("/login", authenticateUserController.handle);
