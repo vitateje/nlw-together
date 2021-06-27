@@ -13,20 +13,6 @@ Next Level Week Six - Rocketseat
 
  - yarn typeorm migration:run ( roda migration )
 
- * - Ordem de Desenvolvimento:
-    * Cria a migration
-    * Cria entity
-    * Cria repository
-    * Cria service
-    * Cria controller
-    * Cria rota
-
- * - Await:
-      ele vai esperar o resultado da ação para seguir o fluxo
-      verificar retorno, caso seja de uma promise utilizar o await
-   - Async:
-      apontar que na classe haverá uma ação com await
-
 # NLW Valoriza
 
 ## Regras
@@ -45,7 +31,7 @@ Next Level Week Six - Rocketseat
 
 [x] Não é permitido o cadastro por usuários que não sejam administradores
 
-- Cadastro de elogios
+- Cadastro de Elogios
 
 [x] Não é permitido um usuário cadastrar um elogio para si
 
