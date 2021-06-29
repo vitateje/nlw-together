@@ -1,17 +1,20 @@
-# nlw-together
-Next Level Week Six - Rocketseat
+# Next Level Week #Valoriza
+Next Level Week 6 - Rocketseat
 
  - git clone 
 
- - yarn install
+ - yarn install ( to install dependencies )
 
- - yarn dev
+ - yarn typeorm migration:run ( to run migrations )
 
- - yarn typeorm migration:create -n CreateTags ( cria migration )
+ - yarn dev ( to run the app )
 
- - yarn typeorm migration: generate -n CreateTags ( gera novamente a migration apos alterações na mesma )
+Good To know:
 
- - yarn typeorm migration:run ( roda migration )
+ - yarn typeorm migration:create -n CreateTags ( to create a migration )
+
+ - yarn typeorm migration: generate -n CreateTags ( to update a migration after changes )
+
 
 # NLW Valoriza
 
@@ -38,3 +41,7 @@ Next Level Week Six - Rocketseat
 [x] Não é permitido cadastrar elogios para usuários inválidos
 
 [x] O usuário precisa estar autenticado na aplicação
+
+- To Do
+
+[ ] clean code 
