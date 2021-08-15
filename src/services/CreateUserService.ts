@@ -11,10 +11,10 @@ interface IUserRequest {
 
 class CreateUserService {
 
-    async execute({ name, email, admin=false, password }: IUserRequest) {
+    async execute({ name, email, admin = false, password }: IUserRequest) {
         const usersRepository = getCustomRepository(UsersRepositories);
 
-        if(!email) {
+        if (!email) {
             throw new Error("Email incorrect");
         }
 
@@ -22,9 +22,9 @@ class CreateUserService {
             email,
         });
 
-        if(userAlreadyExists) {
+        if (userAlreadyExists) {
             throw new Error("User already exists");
-            
+
         }
 
         const passwordHash = await hash(password, 8)

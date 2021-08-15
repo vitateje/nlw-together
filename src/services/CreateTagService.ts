@@ -3,10 +3,10 @@ import { TagsRepositories } from "../repositories/TagsRepositories"
 
 class CreateTagService {
 
-    async execute( name: string ) {
+    async execute(name: string) {
         const tagsRepositories = getCustomRepository(TagsRepositories);
 
-        if(!name) {
+        if (!name) {
             throw new Error("Incorrect Name");
         }
 
@@ -14,7 +14,7 @@ class CreateTagService {
             name,
         });
 
-        if(tagAlreadyExists) {
+        if (tagAlreadyExists) {
             throw new Error("Tag already exists");
         }
         const tag = tagsRepositories.create({

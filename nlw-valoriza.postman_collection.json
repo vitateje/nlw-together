@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "8443877e-a0fa-4231-a00c-0ce27d8d5ae5",
+		"name": "nlw-valoriza",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpcnRydXNAZW1haWwuY29tIiwiaWF0IjoxNjI0NzIyNTgxLCJleHAiOjE2MjQ4MDg5ODEsInN1YiI6Ijg2ZTZkYTJlLTQ2ZWEtNDcwNi1iNzYxLWM2OGU0MGE0ZmUxYyJ9.asSWU578d_JrGsYgx21hQ-D6vdUVv8remd04hnJL42s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Tag",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpcnRydXNAZW1haWwuY29tIiwiaWF0IjoxNjI0NzIyNTgxLCJleHAiOjE2MjQ4MDg5ODEsInN1YiI6Ijg2ZTZkYTJlLTQ2ZWEtNDcwNi1iNzYxLWM2OGU0MGE0ZmUxYyJ9.asSWU578d_JrGsYgx21hQ-D6vdUVv8remd04hnJL42s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List User Send Compliments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpcnRydXNAZW1haWwuY29tIiwiaWF0IjoxNjI0NzY1NDc0LCJleHAiOjE2MjQ4NTE4NzQsInN1YiI6Ijg2ZTZkYTJlLTQ2ZWEtNDcwNi1iNzYxLWM2OGU0MGE0ZmUxYyJ9.kdWYfdXNfvaFA_8JgDCO_pNWXd56eL4x2Kw_RcG_Rxs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"virtrus@email.com\",\r\n    \"password\": \"54321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/compliments/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"compliments",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List User Receive Compliments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpcnRydXNAZW1haWwuY29tIiwiaWF0IjoxNjI0NzY1NDc0LCJleHAiOjE2MjQ4NTE4NzQsInN1YiI6Ijg2ZTZkYTJlLTQ2ZWEtNDcwNi1iNzYxLWM2OGU0MGE0ZmUxYyJ9.kdWYfdXNfvaFA_8JgDCO_pNWXd56eL4x2Kw_RcG_Rxs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"virtrus@email.com\",\r\n    \"password\": \"54321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/compliments/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"compliments",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Virtrus The Cat\",\r\n    \"email\": \"virtrus@email.com\",\r\n    \"admin\": true,\r\n    \"password\": \"lasanha\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticated User - Login",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"virtrus@email.com\",\r\n    \"password\": \"54321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tag",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpcnRydXNAZW1haWwuY29tIiwiaWF0IjoxNjI0NzIyNTgxLCJleHAiOjE2MjQ4MDg5ODEsInN1YiI6Ijg2ZTZkYTJlLTQ2ZWEtNDcwNi1iNzYxLWM2OGU0MGE0ZmUxYyJ9.asSWU578d_JrGsYgx21hQ-D6vdUVv8remd04hnJL42s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"o2t11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Compliments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpcnRydXNAZW1haWwuY29tIiwiaWF0IjoxNjI0NzY1NDc0LCJleHAiOjE2MjQ4NTE4NzQsInN1YiI6Ijg2ZTZkYTJlLTQ2ZWEtNDcwNi1iNzYxLWM2OGU0MGE0ZmUxYyJ9.kdWYfdXNfvaFA_8JgDCO_pNWXd56eL4x2Kw_RcG_Rxs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tag_id\": \"283daf5b-3218-45f5-8a9b-51fa6618a2ad\",\r\n    \"user_sender\": \"86e6da2e-46ea-4706-b761-c68e40a4fe1c\",\r\n    \"user_receiver\": \"dc904ab2-93fb-45a8-88b2-751841b3116a\",\r\n    \"message\": \"Its About Corage\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/compliments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"compliments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
