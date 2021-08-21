@@ -9,6 +9,7 @@ import { ListUserSendComplimentsController } from "./controllers/ListUserSendCom
 import { ListUserReceiveComplimentsController } from "./controllers/ListUserReceiveComplimentsController";
 import { ListTagsController } from "./controllers/ListTagsController";
 import { ListUsersController } from "./controllers/ListUsersController";
+var cors = require('cors')
 
 const router = Router();
 
@@ -21,21 +22,21 @@ const listUserReceiveComplimentsController = new ListUserReceiveComplimentsContr
 const listTagsController = new ListTagsController();
 const listUsersController = new ListUsersController();
 
-router.post("/users", createUserController.handle);
+router.post("/users", cors(), createUserController.handle);
 
 // middlewares: fica entre a requisição e a resposta - ensureAdmin ( pode interceptar uma requisição )
-router.post("/tags", ensureAuthenticated, ensureAdmin, createTagController.handle);
+router.post("/tags", cors(), ensureAuthenticated, ensureAdmin, createTagController.handle);
 
-router.post("/login", authenticateUserController.handle);
+router.post("/login", cors(),  authenticateUserController.handle);
 
-router.post("/compliments", ensureAuthenticated, createComplimentController.handle);
+router.post("/compliments", cors(), ensureAuthenticated, createComplimentController.handle);
 
-router.get("/users/compliments/send", ensureAuthenticated, listUserSendComplimentsController.handle );
+router.get("/users/compliments/send", cors(), ensureAuthenticated, listUserSendComplimentsController.handle );
 
-router.get("/users/compliments/receive", ensureAuthenticated, listUserReceiveComplimentsController.handle);
+router.get("/users/compliments/receive", cors(), ensureAuthenticated, listUserReceiveComplimentsController.handle);
 
-router.get("/tags", ensureAuthenticated, listTagsController.handle);
+router.get("/tags", cors(), ensureAuthenticated, listTagsController.handle);
 
-router.get("/users", ensureAuthenticated, listUsersController.handle);
+router.get("/users", cors(), listUsersController.handle);
 
 export { router };
