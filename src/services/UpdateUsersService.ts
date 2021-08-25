@@ -10,18 +10,10 @@ interface IUserRequest {
     password: string
 }
 
-
 class UpdateUsersService {
 
-    async execute({
-        id,
-        name,
-        email,
-        admin,
-        password }: IUserRequest){
+    async execute({ id, name, email, admin = false, password }: IUserRequest) {
         const usersRepositories = getCustomRepository(UsersRepositories);
-
-        
 
         if (!email) {
             throw new Error("Email incorrect");
