@@ -9,6 +9,7 @@ import { ListUserSendComplimentsController } from "./controllers/ListUserSendCom
 import { ListUserReceiveComplimentsController } from "./controllers/ListUserReceiveComplimentsController";
 import { ListTagsController } from "./controllers/ListTagsController";
 import { ListUsersController } from "./controllers/ListUsersController";
+import { UpdateUserController } from "./controllers/UpdateUserController";
 var cors = require('cors')
 
 const router = Router();
@@ -21,8 +22,11 @@ const listUserSendComplimentsController = new ListUserSendComplimentsController(
 const listUserReceiveComplimentsController = new ListUserReceiveComplimentsController();
 const listTagsController = new ListTagsController();
 const listUsersController = new ListUsersController();
+const updateUserController = new UpdateUserController();
 
 router.post("/users", cors(), createUserController.handle);
+
+router.put("/users/:id", cors(), updateUserController.handle);
 
 // middlewares: fica entre a requisição e a resposta - ensureAdmin ( pode interceptar uma requisição )
 router.post("/tags", cors(), ensureAuthenticated, ensureAdmin, createTagController.handle);
