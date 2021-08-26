@@ -10,6 +10,8 @@ import { ListUserReceiveComplimentsController } from "./controllers/ListUserRece
 import { ListTagsController } from "./controllers/ListTagsController";
 import { ListUsersController } from "./controllers/ListUsersController";
 import { UpdateUserController } from "./controllers/UpdateUserController";
+import { DeleteUserController } from "./controllers/DeleteUserController";
+
 var cors = require('cors')
 
 const router = Router();
@@ -23,10 +25,13 @@ const listUserReceiveComplimentsController = new ListUserReceiveComplimentsContr
 const listTagsController = new ListTagsController();
 const listUsersController = new ListUsersController();
 const updateUserController = new UpdateUserController();
+const deleteUserController = new DeleteUserController();
 
 router.post("/users", cors(), createUserController.handle);
 
 router.put("/users/:id", cors(), updateUserController.handle);
+
+router.delete("/users/:id", cors(), deleteUserController.handle);
 
 // middlewares: fica entre a requisição e a resposta - ensureAdmin ( pode interceptar uma requisição )
 router.post("/tags", cors(), ensureAuthenticated, ensureAdmin, createTagController.handle);

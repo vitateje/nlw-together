@@ -16,6 +16,7 @@ class Compliment {
     @JoinColumn({name: "user_sender"})
     @ManyToOne(() => User)
     userSender: User
+    
 
     @Column()
     user_receiver: string;
@@ -23,6 +24,7 @@ class Compliment {
     @JoinColumn({name: "user_receiver"})
     @ManyToOne(() => User)
     userReceiver: User
+    
 
     @Column()
     tag_id: string;
@@ -30,6 +32,7 @@ class Compliment {
     @JoinColumn({name: "tag_id"})
     @ManyToOne(() => Tag) 
     tag: Tag;
+    cascade: true
 
     @Column()
     message: string;
