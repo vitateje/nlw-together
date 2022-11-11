@@ -19,14 +19,6 @@ class UpdateUsersService {
             throw new Error("Email incorrect");
         }
 
-        const emailAlreadyExists = await usersRepositories.findOne({
-            email,
-        });
-
-        if (emailAlreadyExists) {
-            throw new Error("Email already exists");
-        }
-
         const passwordHash = await hash(password, 8)
 
         const user = await usersRepositories.findOne(id);
