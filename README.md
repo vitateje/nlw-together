@@ -11,6 +11,8 @@ Next Level Week 6 - Rocketseat
 
 Good To know:
 
+ - yarn add typescript --dev
+
  - yarn typeorm migration:create -n CreateTags ( to create a migration )
 
  - yarn typeorm migration: generate -n CreateTags ( to update a migration after changes )
