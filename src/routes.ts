@@ -5,6 +5,7 @@ import { CreateComplimentController } from "./controllers/CreateComplimentContro
 import { AuthenticateUserController } from "./controllers/AuthenticateUserController";
 import { ensureAdmin } from "./middlewares/ensureAdmin";
 import { ensureAuthenticated } from "./middlewares/ensureAuthenticated";
+import { checkUserItems } from "./middlewares/ensureUserItem";
 import { ListUserSendComplimentsController } from "./controllers/ListUserSendComplimentsController";
 import { ListUserReceiveComplimentsController } from "./controllers/ListUserReceiveComplimentsController";
 import { ListTagsController } from "./controllers/ListTagsController";
@@ -45,6 +46,8 @@ router.get("/users/compliments/send", cors(), ensureAuthenticated, listUserSendC
 router.get("/users/compliments/receive", cors(), ensureAuthenticated, listUserReceiveComplimentsController.handle);
 
 router.get("/tags", cors(), ensureAuthenticated, listTagsController.handle);
+
+// router.get("/users", cors(), checkUserItems, listUsersController.handle);
 
 router.get("/users", cors(), listUsersController.handle);
 

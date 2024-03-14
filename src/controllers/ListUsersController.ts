@@ -16,6 +16,8 @@ class ListUsersController {
 
         // console.log(userItems)
 
+        console.log(request)
+
         return response.json(users);
     }
 }
